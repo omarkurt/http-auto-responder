@@ -1,10 +1,9 @@
-FROM ubuntu:18.04
-RUN  apt-get update \
-  && apt-get install -y wget \
-  && rm -rf /var/lib/apt/lists/*
-RUN wget https://github.com/asalih/http-auto-responder/releases/download/v1.0.0/http-auto-responder-linux.tar.gz
-RUN tar -xf http-auto-responder-linux.tar.gz
-WORKDIR "/http-auto-responder-linux"
-CMD ["./http-auto-responder"]
 
-EXPOSE 80
+FROM golang
+ADD . /go/src/github.com/omarkurt/http-auto-responder
+WORKDIR "/go/src/github.com/omarkurt/http-auto-responder"
+RUN go build . 
+RUN mkdir json
+ADD ./data /go/src/github.com/omarkurt/http-auto-responder/json
+CMD ["./http-auto-responder"]
+EXPOSE 8021
