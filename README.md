@@ -2,6 +2,9 @@
 
 Useful tool for static responses. It's like Fiddler's AutoResponder.
 
+![http-auto-responder](https://i.imgur.com/TU1WWDz.png) 
+
+
 ## Features
 
 -   Rule definitions with matching methods.
@@ -22,6 +25,13 @@ Useful tool for static responses. It's like Fiddler's AutoResponder.
 go get -u github.com/asalih/http-auto-responder
 ```
 Then edit config.json
+# Docker
+```
+git clone https://github.com/omarkurt/http-auto-responder
+cd http-auto-responder
+docker-compose up -d 
+```
+See, http://localhost:8042
 
 ## Example
 The tool provides minimum UI except if you want to use FARX files. After you get the source or get the release binaries then just edit the config file as you wish then you good to go!
@@ -41,6 +51,11 @@ In this example below, FARX folder specified.
     "port": 80
 }
 ```
+## Test Data
+
+Basically, I created both rule and response about Apache Header. See Example [/data](data) directory.
+
+![http-auto-responder](https://i.imgur.com/3QW764V.png)
 
 ## ToDo
 
