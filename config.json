@@ -1,6 +1,6 @@
 {
     "databaseName": "",
-    "jsonsFolderPath": "",
-    "farxFilesFolderPath": "./farx",
-    "port": 80
+    "jsonsFolderPath": "./json",
+    "farxFilesFolderPath": "",
+    "port": 8021
 }
